@@ -117,7 +117,7 @@ ttk.Label(labelsFrame, text="Label3").grid(column=0, row=2)
 second_row_frame = ttk.LabelFrame(top_row_frame, text ='Settings')
 second_row_frame.grid(column =6 , row = 0, padx = 2, pady = 2, sticky = 'W' + 'E' +'N' + 'S')
 
-ttk.Button(second_row_frame, text = 'Font', width = 12).grid(column = 0, row = 0 , sticky ='E' + 'W' )
+ttk.Button(second_row_frame, text = 'Font', width = 12).grid(column = 0, row = 0 , sticky ='N' + 'S' )
 tk.Checkbutton(second_row_frame, text="Time").grid(column = 1, row = 0, sticky = 'W')
 tk.Checkbutton(second_row_frame, text="CR=LF").grid(column = 1, row = 1, sticky = 'W')
 
@@ -127,6 +127,13 @@ tk.Checkbutton(second_row_frame, text="Start log").grid(column = 2, row = 0, sti
 
 for child in second_row_frame.winfo_children(): 
     child.grid_configure(padx=4, pady=4)
+
+
+#text1.pack(side=LEFT)
+
+third_row_text = ttk.LabelFrame(top_row_frame, text ='Read text')
+third_row_text.grid(column =0 , row = 2, padx = 2, pady = 2, sticky = 'W' + 'E' +'N' + 'S')
+tk.Text(third_row_text, text = 'Font', width = 12).grid(column = 0, row = 0 , sticky ='N' + 'S' )
 
 win.mainloop()
 
